@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class Orders {
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int orderId;
 //	private LocalDate date;
 //	private String status;

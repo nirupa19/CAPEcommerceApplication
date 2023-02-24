@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 public class Payment {
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int paymentId;
 	private LocalDate paymentDate;
 	private String paymentType;

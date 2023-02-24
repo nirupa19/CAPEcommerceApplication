@@ -79,21 +79,7 @@
     <scope>provided</scope>
 </dependency>
         
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-jersey</artifactId>
-    </dependency>   
-
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <version>2.6.3</version>
-</dependency>
-<dependency>
-    <groupId>com.spotify</groupId>
-    <artifactId>docker-maven-plugin</artifactId>
-    <version>1.2.0</version>
-</dependency>
+  
         
         <dependency>
     <groupId>org.junit.jupiter</groupId>
@@ -118,7 +104,7 @@
       </activation>
       <properties>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>fe27449e96fda9fdd7ac36063976341684430a79</sonar.login>
+        <sonar.login>858cfa54dfafaf2b9cf65a611c290566746e97bc</sonar.login>
       </properties>
     </profile>
 
@@ -129,32 +115,12 @@
 		<plugins>
 		
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+          
+        </plugin>
 			
-			<plugin>
-        <groupId>com.spotify</groupId>
-        <artifactId>dockerfile-maven-plugin</artifactId>
-        <version>1.3.7</version>
-        <executions>
-          <execution>
-            <id>default</id>
-            <goals>
-              <goal>build</goal>
-              <goal>push</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <repository>haneeshdevops/ecommerce_docker</repository>
-          <tag>${project.version}</tag>
-          <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-          <buildArgs>
-            <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
-          </buildArgs>
-        </configuration>
-      </plugin>
 			
 		</plugins>
 		

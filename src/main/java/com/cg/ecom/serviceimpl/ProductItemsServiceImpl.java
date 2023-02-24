@@ -75,18 +75,7 @@ public class ProductItemsServiceImpl implements ProductItemsService {
 		return null;
 	}
 
-//	@Override
-//	public List<ProductItemsDTO> findAll() {
-//
-//		Iterable<ProductItems> productitems = productItemsRepository.findAll();
-//		List<ProductItemsDTO> dtos = new ArrayList<>();
-//		for (ProductItems productitem : productitems) {
-//			ProductItemsDTO dto = new ProductItemsDTO();
-//			BeanUtils.copyProperties(productitem, dto);
-//			dtos.add(dto);
-//		}
-//		return dtos;
-//	}
+
 
 	public List<ProductItemsDTO> findAll() {
 	    List<ProductItems> productitems = productItemsRepository.findAll();
