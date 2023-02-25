@@ -23,7 +23,7 @@ public class Customers {
 
 	@Id
 	@Column(name = "customerId")
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int customerId;
 	private String customerName;
 	private String address;
